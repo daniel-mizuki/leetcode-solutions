@@ -24,10 +24,18 @@ class DynamicArray:
         self._size += 1
 
     def popback(self) -> int:
-        pass
+        if self._size == 0:
+            raise IndexError("Array is empty")
+        self._size -= 1
+        return self._array[self._size]
 
     def resize(self) -> None:
-        pass
+        new_capacity = self._capacity * 2
+        new_array = [None] * new_capacity
+        for i in range(self._size):
+            new_array[i] = self._array[i]
+        self._array = new_array
+        self._capacity = new_capacity
 
     def getSize(self) -> int:
         return self._size
