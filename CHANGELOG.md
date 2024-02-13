@@ -1,5 +1,22 @@
 # Changelog
 
+## [0.1.0](https://github.com/daniel-mizuki/leetcode-solutions/compare/v0.0.3...v0.1.0) (2024-02-13)
+
+
+### Features
+
+* Add another line ([a0a8c4e](https://github.com/daniel-mizuki/leetcode-solutions/commit/a0a8c4ed7971c527fa457d6d7eff32551d51c068))
+* Add another line ([a2afa56](https://github.com/daniel-mizuki/leetcode-solutions/commit/a2afa56bf0bd284eba2beda3a68dfe72c5ead693))
+
+
+### Bug Fixes
+
+* Add test4 ([910e429](https://github.com/daniel-mizuki/leetcode-solutions/commit/910e4299c1808f0ca90912755edf6d23930836b6))
+* Add test4 ([5522318](https://github.com/daniel-mizuki/leetcode-solutions/commit/5522318b5f1f47adc5e2e4da5638b3344226f034))
+* Add test5 ([fc5f241](https://github.com/daniel-mizuki/leetcode-solutions/commit/fc5f2410205dfb212d07b346f1e35654ed449a91))
+* Added line ([0dd71cf](https://github.com/daniel-mizuki/leetcode-solutions/commit/0dd71cff831bfca7677837eba7a4ca87c279af21))
+* Added line ([4aca032](https://github.com/daniel-mizuki/leetcode-solutions/commit/4aca032abe732fd173ef25142a4cc263580e09b0))
+
 ## [0.0.3](https://github.com/daniel-mizuki/leetcode-solutions/compare/0.0.2...v0.0.3) (2024-02-13)
 
 
