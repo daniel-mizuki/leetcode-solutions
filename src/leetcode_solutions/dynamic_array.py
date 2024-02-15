@@ -1,3 +1,8 @@
+"""
+Dynamic array data structure
+"""
+
+
 class DynamicArray:
     """
     Dynamic array data structure
