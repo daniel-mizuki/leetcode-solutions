@@ -8,5 +8,5 @@ on:
 jobs:
   reformat:
     uses: ./.github/workflows/reformat.yaml
-    permissions:
-      contents: write
+    #permissions:
+    #  contents: write
