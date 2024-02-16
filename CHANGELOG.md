@@ -1,5 +1,41 @@
 # Changelog
 
+## [0.2.0](https://github.com/daniel-mizuki/leetcode-solutions/compare/v0.1.4...v0.2.0) (2024-02-16)
+
+
+### Features
+
+* Add another line ([a0a8c4e](https://github.com/daniel-mizuki/leetcode-solutions/commit/a0a8c4ed7971c527fa457d6d7eff32551d51c068))
+* Add another line ([a2afa56](https://github.com/daniel-mizuki/leetcode-solutions/commit/a2afa56bf0bd284eba2beda3a68dfe72c5ead693))
+
+
+### Bug Fixes
+
+* Add file to test Release Please ([3c1a8c0](https://github.com/daniel-mizuki/leetcode-solutions/commit/3c1a8c091318d7e909f2067b6b6c097d1483617e))
+* Add test11 ([#17](https://github.com/daniel-mizuki/leetcode-solutions/issues/17)) ([7d52182](https://github.com/daniel-mizuki/leetcode-solutions/commit/7d52182b9f74489918721f0bd0a68578e5f32a62))
+* Add test4 ([910e429](https://github.com/daniel-mizuki/leetcode-solutions/commit/910e4299c1808f0ca90912755edf6d23930836b6))
+* Add test4 ([5522318](https://github.com/daniel-mizuki/leetcode-solutions/commit/5522318b5f1f47adc5e2e4da5638b3344226f034))
+* Add test5 ([fc5f241](https://github.com/daniel-mizuki/leetcode-solutions/commit/fc5f2410205dfb212d07b346f1e35654ed449a91))
+* Add test6 ([#12](https://github.com/daniel-mizuki/leetcode-solutions/issues/12)) ([1fb8beb](https://github.com/daniel-mizuki/leetcode-solutions/commit/1fb8beb0b5a677fbb8b77585e39a2324605803e4))
+* Add test7 and test8 ([e9e411b](https://github.com/daniel-mizuki/leetcode-solutions/commit/e9e411bfc6c82b6b0d8ff5a0e4154dac28dc8cfa))
+* Add test9 and test10 ([652507f](https://github.com/daniel-mizuki/leetcode-solutions/commit/652507f6e8d2a553bd0bccfadd99f3cc253c9018))
+* Added line ([0dd71cf](https://github.com/daniel-mizuki/leetcode-solutions/commit/0dd71cff831bfca7677837eba7a4ca87c279af21))
+* Added line ([4aca032](https://github.com/daniel-mizuki/leetcode-solutions/commit/4aca032abe732fd173ef25142a4cc263580e09b0))
+* Test Release Please ([d7ac82d](https://github.com/daniel-mizuki/leetcode-solutions/commit/d7ac82d2af7e924e6868aeee8138e4988948264a))
+* test12 ([c5a8bac](https://github.com/daniel-mizuki/leetcode-solutions/commit/c5a8bace6cf7286bb9d4e7216102b708993f9add))
+* test15 ([fb850dc](https://github.com/daniel-mizuki/leetcode-solutions/commit/fb850dcf446be62659962b3e9647a6e0556fef70))
+* test18 ([565728b](https://github.com/daniel-mizuki/leetcode-solutions/commit/565728bc21acf08068d94471e97fd80490a8b729))
+* test19 ([b5eb4df](https://github.com/daniel-mizuki/leetcode-solutions/commit/b5eb4dfeb2d4db81f7ea5de63824ebe55a7ceafe))
+* test20 ([ad82cb3](https://github.com/daniel-mizuki/leetcode-solutions/commit/ad82cb3e83559b3bc8c7ad731147b5ebcde34965))
+* test21 ([5d9c181](https://github.com/daniel-mizuki/leetcode-solutions/commit/5d9c181a6997979508cf538d5b4fc99933a81feb))
+* Testing Release Please ([0c9e908](https://github.com/daniel-mizuki/leetcode-solutions/commit/0c9e908e43cf803f18326787731d417bfad9e812))
+* Testing Release Please ([b3d2c7b](https://github.com/daniel-mizuki/leetcode-solutions/commit/b3d2c7b75fb361d6c7a85e02d7d5b0dcf672e002))
+
+
+### Documentation
+
+* Update README.md ([#16](https://github.com/daniel-mizuki/leetcode-solutions/issues/16)) ([2a98ec1](https://github.com/daniel-mizuki/leetcode-solutions/commit/2a98ec14940dda6ec82094978d588fa698d489e0))
+
 ## [0.1.4](https://github.com/daniel-mizuki/leetcode-solutions/compare/v0.1.3...v0.1.4) (2024-02-15)
 
 
