@@ -21,4 +21,4 @@ jobs:
           pip install black
       - name: Test
         run: |
-          git branch
+          git branch -a
