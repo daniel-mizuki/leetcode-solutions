@@ -6,7 +6,7 @@ on:
       - develop
 
 jobs:
-  call-workflow:
+  reformat:
     uses: ./.github/workflows/reformat.yaml
     permissions:
       contents: write
