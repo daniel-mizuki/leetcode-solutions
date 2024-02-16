@@ -4,12 +4,9 @@ on:
   push:
     branches:
       - develop
-  pull_request:
-    branches:
-      - develop
 
 jobs:
-  reformat:
+  call-workflow:
     uses: ./.github/workflows/reformat.yaml
-  lint:
-    uses: ./.github/workflows/lint.yaml
+    permissions:
+      contents: write
