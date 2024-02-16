@@ -11,4 +11,5 @@ jobs:
     permissions:
       contents: write
   lint:
+    needs: reformat
     uses: ./.github/workflows/lint.yaml
