@@ -10,3 +10,5 @@ jobs:
     uses: ./.github/workflows/reformat.yaml
     permissions:
       contents: write
+  lint:
+    uses: ./.github/workflows/lint.yaml
