@@ -1,9 +1,9 @@
-name: Lint
+name: Unit Test
 
 on: [workflow_call]
 
 jobs:
-  lint:
+  unit-test:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -18,7 +18,8 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install prospector
-      - name: Lint code
+          pip install pytest
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+      - name: Unit test code
         run: |
-          prospector
+          pytest

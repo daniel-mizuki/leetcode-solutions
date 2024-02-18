@@ -13,3 +13,6 @@ jobs:
   lint:
     needs: reformat
     uses: ./.github/workflows/lint.yaml
+  unit-test:
+    needs: reformat
+    uses: ./.github/workflows/unit-test.yaml
