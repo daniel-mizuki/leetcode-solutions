@@ -1,4 +1,4 @@
-name: Validate
+name: Validate and merge
 
 on:
   push:
@@ -16,3 +16,10 @@ jobs:
   unit-test:
     needs: reformat
     uses: ./.github/workflows/unit-test.yaml
+  merge:
+    needs: [reformat, lint, unit-test]
+    uses: ./.github/workflows/merge.yaml
+    with:
+      target_branch: main
+    permissions:
+      contents: write
