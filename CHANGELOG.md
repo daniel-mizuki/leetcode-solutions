@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.7](https://github.com/daniel-mizuki/leetcode-solutions/compare/v0.2.6...v0.2.7) (2024-02-24)
+
+
+### Bug Fixes
+
+* test29 ([42f142b](https://github.com/daniel-mizuki/leetcode-solutions/commit/42f142bf31016cea10f59190978447ac0ab56f21))
+
 ## [0.2.6](https://github.com/daniel-mizuki/leetcode-solutions/compare/v0.2.5...v0.2.6) (2024-02-24)
 
 
