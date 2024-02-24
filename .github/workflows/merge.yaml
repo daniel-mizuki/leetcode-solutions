@@ -21,5 +21,6 @@ jobs:
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git fetch
           git switch ${{ inputs.target_branch }}
+          git pull
           git merge $GITHUB_REF_NAME -m "chore: Auto merge $GITHUB_REF_NAME into ${{ inputs.target_branch }}"
           git push
