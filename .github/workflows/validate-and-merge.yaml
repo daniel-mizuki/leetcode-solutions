@@ -1,4 +1,4 @@
-name: Validate and merge
+name: Validate and Merge
 
 on:
   push:
