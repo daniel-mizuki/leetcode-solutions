@@ -1,0 +1,13 @@
+name: release-please
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  merge:
+    uses: ./.github/workflows/merge.yaml
+    with:
+      target_branch: develop
+    permissions:
+      contents: write
