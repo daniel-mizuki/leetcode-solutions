@@ -22,5 +22,5 @@ jobs:
           git fetch --unshallow
           git switch ${{ inputs.target_branch }}
           git pull
-          git merge ${{ github.ref_name }} -m "chore: Auto merge ${{ github.ref_name }} into ${{ inputs.target_branch }}"
+          git merge --ff --no-edit ${{ github.ref_name }} -m "chore: Auto merge ${{ github.ref_name }} into ${{ inputs.target_branch }}"
           git push
