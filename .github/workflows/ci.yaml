@@ -1,4 +1,4 @@
-name: Validate and Merge
+name: CI
 
 on:
   push:
@@ -17,8 +17,15 @@ jobs:
     needs: reformat
     uses: ./.github/workflows/unit-test.yaml
   merge:
-    needs: [reformat, lint, unit-test]
+    needs: [lint, unit-test]
     uses: ./.github/workflows/merge.yaml
+    with:
+      target_branch: main
+    permissions:
+      contents: write
+  release-please:
+    needs: merge
+    uses: ./.github/workflows/release-please.yaml
     with:
       target_branch: main
     permissions:
