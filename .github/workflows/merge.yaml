@@ -19,7 +19,7 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git fetch
+          git fetch --unshallow
           git switch ${{ inputs.target_branch }}
           git pull
           git merge ${{ github.ref_name }} -m "chore: Auto merge ${{ github.ref_name }} into ${{ inputs.target_branch }}"
