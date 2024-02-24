@@ -1,0 +1,26 @@
+name: Merge
+
+on: 
+  workflow_call:
+    inputs:
+      target_branch:
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch --unshallow
+          git switch ${{ inputs.target_branch }}
+          git pull
+          git merge ${{ github.ref_name }} -m "chore: Auto merge ${{ github.ref_name }} into ${{ inputs.target_branch }}"
+          git push
