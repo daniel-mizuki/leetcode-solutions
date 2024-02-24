@@ -1,11 +1,18 @@
 name: release-please
 
 on:
-  release:
-    types: [published]
+  push:
+    branches:
+      - main
 
 jobs:
+  release-please:
+    uses: ./.github/workflows/release-please.yaml
+    permissions:
+      contents: write
+      pull-requests: write
   merge:
+    needs: release-please
     uses: ./.github/workflows/merge.yaml
     with:
       target_branch: develop
