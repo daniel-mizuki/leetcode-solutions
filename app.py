@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
 
+"""
+App
+"""
+
 import aws_cdk as cdk
 
 from cdk.pipeline_stack import PipelineStack
