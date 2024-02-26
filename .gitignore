@@ -173,3 +173,7 @@ desktop.ini
 
 #VS Code
 .vscode/
+
+# CDK asset staging directory
+.cdk.staging
+cdk.out
