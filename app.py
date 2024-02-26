@@ -4,11 +4,11 @@
 App
 """
 
-import aws_cdk as cdk
+import aws_cdk
 
 from cdk.pipeline_stack import PipelineStack
 
-app = cdk.App()
+app = aws_cdk.App()
 PipelineStack(app, "PipelineStack")
 
 app.synth()
