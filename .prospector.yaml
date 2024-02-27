@@ -1,6 +1,7 @@
 pylint:
   disable:
     - astroid-error
+    - unused-variable
 
 pyflakes:
   disable:
