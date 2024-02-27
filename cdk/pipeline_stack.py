@@ -22,7 +22,7 @@ class PipelineStack(Stack):
             "main",
         )
 
-        pipelines.CodePipeline(
+        pipeline = pipelines.CodePipeline(
             self,
             "Pipeline",
             synth=pipelines.ShellStep(
