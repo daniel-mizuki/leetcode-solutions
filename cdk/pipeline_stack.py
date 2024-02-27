@@ -17,9 +17,14 @@ class PipelineStack(Stack):
     def __init__(self, scope: Construct, construct_id: str, **kwargs) -> None:
         super().__init__(scope, construct_id, **kwargs)
 
-        source = pipelines.CodePipelineSource.git_hub(
+        source = pipelines.CodePipelineSource.connection(
             "daniel-mizuki/leetcode-solutions",
             "main",
+            connection_arn=(
+                "arn:aws:codestar-connections:us-west-1"
+                ":211125549495:connection"
+                "/bf8949cf-df8a-4bd8-86fa-b00da059fd43"
+            ),
         )
 
         pipeline = pipelines.CodePipeline(
