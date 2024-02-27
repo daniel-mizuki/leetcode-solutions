@@ -27,7 +27,7 @@ class PipelineStack(Stack):
             ),
         )
 
-        pipeline = pipelines.CodePipeline(
+        pipelines.CodePipeline(
             self,
             "Pipeline",
             synth=pipelines.ShellStep(
