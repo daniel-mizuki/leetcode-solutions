@@ -36,7 +36,7 @@ class LinkedList:
             return -1
 
         current_node = self.head
-        for i in range(index):
+        for _ in range(index):
             current_node = current_node.next_node
 
         return current_node.value
@@ -56,7 +56,8 @@ class LinkedList:
         Inserts a new node at the tail of the list
         """
         new_node = LinkedListNode(val)
-        self.tail.next_node = new_node
+        if self.tail:
+            self.tail.next_node = new_node
         self.tail = new_node
         if not self.head:
             self.head = new_node
@@ -83,6 +84,7 @@ class LinkedList:
             self.tail = previous_node
 
         del current_node
+        self.size -= 1
 
         return True
 
@@ -90,4 +92,9 @@ class LinkedList:
         """
         Returns the values of the list
         """
-        return [self.get(i) for i in range(self.size)]
+        values = []
+        current_node = self.head
+        while current_node:
+            values.append(current_node.value)
+            current_node = current_node.next_node
+        return values
