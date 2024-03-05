@@ -92,9 +92,9 @@ class LinkedList:
         """
         Returns the values of the list
         """
-        values = []
+
         current_node = self.head
-        while current_node:
-            values.append(current_node.value)
-            current_node = current_node.next_node
-        return values
+        return [
+            (current_node.value, current_node := current_node.next_node)[0]
+            for _ in range(self.size)
+        ]
