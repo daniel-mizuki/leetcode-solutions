@@ -29,7 +29,7 @@ class Solution:
             Dict[int, int]: The shortest distance from the starting
                 vertex to every vertex in the graph
         """
-        unvisted = {v for v in range(n)}
+        unvisted = set(range(n))
         distances = {v: float("inf") for v in range(n)}
 
         distances[src] = 0
