@@ -17,7 +17,7 @@ def compare_triplets(t1: List[int], t2: List[int]) -> int:
     for i in range(3):
         if t1[i] < t2[i]:
             return -1
-        elif t1[i] > t2[i]:
+        if t1[i] > t2[i]:
             return 1
     return 0
 
@@ -50,11 +50,7 @@ class Solution:
             num_set.remove(neg_num)
             for pos_num in sorted_nums[: zero_pos - 1 : -1]:
                 complement = -(neg_num + pos_num)
-                if (
-                    complement in num_set
-                    and complement > neg_num
-                    and complement < pos_num
-                ):
+                if complement in num_set and neg_num < complement < pos_num:
                     res.append([neg_num, -(neg_num + pos_num), pos_num])
 
         num_counts = Counter(nums)
