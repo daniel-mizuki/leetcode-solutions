@@ -39,6 +39,10 @@ from leetcode_solutions.three_sum import Solution
                 [-1, 0, 1],
             ],
         ),
+        (
+            [1, 1, -2],
+            [[-2, 1, 1]],
+        ),
     ],
 )
 def test_three_sum(nums, solution):

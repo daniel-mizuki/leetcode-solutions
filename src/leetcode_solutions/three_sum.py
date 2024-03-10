@@ -42,30 +42,33 @@ class Solution:
 
         res = []
 
-        num_set = set(nums)
-        sorted_nums = sorted(num_set)
-        zero_pos = bisect.bisect(sorted_nums, 0)
-
-        for neg_num in sorted_nums[:zero_pos]:
-            num_set.remove(neg_num)
-            for pos_num in sorted_nums[: zero_pos - 1 : -1]:
-                complement = -(neg_num + pos_num)
-                if complement in num_set and neg_num < complement < pos_num:
-                    res.append([neg_num, -(neg_num + pos_num), pos_num])
-
         num_counts = Counter(nums)
-        # Hande triplets with duplicate numbers
-        for num, count in num_counts.items():
-            triplet = None
-            # Handle case for three 0s in triplet
-            if num == 0 and count >= 3:
-                triplet = [0, 0, 0]
-            # Handle case for two of same number in triplet
-            if num < 0 and count >= 2 and -2 * num in num_counts:
-                triplet = [num, num, -2 * num]
-            if num > 0 and count >= 2 and -2 * num in num_counts:
-                triplet = [-2 * num, num, num]
-            if triplet:
-                bisect.insort(res, triplet, key=compare_triplets)
+        sorted_nums = sorted(num_counts.keys())
+        neg_end = bisect.bisect(sorted_nums, -1)
+        pos_start = bisect.bisect(sorted_nums, 0)
+
+        for neg_num in sorted_nums[:neg_end]:
+
+            # Handle case for two of same negative number in triplet
+            complement = -2 * neg_num
+            if num_counts[neg_num] >= 2 and complement in num_counts:
+                res.append([neg_num, neg_num, complement])
+
+            # Handle general case
+            for pos_num in sorted_nums[: pos_start - 1 : -1]:
+                complement = -(neg_num + pos_num)
+                if complement in num_counts and neg_num < complement < pos_num:
+                    res.append([neg_num, complement, pos_num])
+
+            # Handle case for two of same positive number in triplet
+            complement = -neg_num / 2
+            if num_counts[complement] >= 2:
+                res.append([neg_num, complement, complement])
+
+            del num_counts[neg_num]
+
+        # Handle case for three 0s in triplet
+        if num_counts[0] >= 3:
+            res.append([0, 0, 0])
 
         return res
