@@ -21,16 +21,32 @@ class Solution:
             int: Length of the longest substring
         """
 
-        seen = {}
+        # max_len = 0
+        # substr_start = 0
+        # seen = {}
+
+        # for i, char in enumerate(s):
+        #     if char in seen and seen[char] >= substr_start:
+        #         substr_start = seen[char] + 1
+        #     else:
+        #         max_len = max(max_len, i - substr_start + 1)
+
+        #     seen[char] = i
+
+        # return max_len
+
         max_len = 0
         substr_start = 0
+        seen = set()
 
         for i, char in enumerate(s):
-            if char in seen and seen[char] >= substr_start:
-                substr_start = seen[char] + 1
-            else:
-                max_len = max(max_len, i - substr_start + 1)
+            while char in seen:
+                seen.remove(s[substr_start])
+                substr_start += 1
 
-            seen[char] = i
+            if (curr_len := i - substr_start + 1) > max_len:
+                max_len = curr_len
+
+            seen.add(char)
 
         return max_len
