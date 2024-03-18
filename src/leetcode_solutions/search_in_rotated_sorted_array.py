@@ -4,7 +4,6 @@ https://leetcode.com/problems/search-in-rotated-sorted-array/
 """
 
 from typing import List
-import bisect
 
 
 class Solution:
