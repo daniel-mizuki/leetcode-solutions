@@ -17,4 +17,4 @@ class ListNode:
                 return False
             node = node.next
             other = other.next
-        return not other
+        return not (other or node)
