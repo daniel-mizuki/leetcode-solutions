@@ -12,7 +12,7 @@ class ListNode:
 
     def __eq__(self, other) -> bool:
         node = self
-        while node:
+        while node and other:
             if node.val != other.val:
                 return False
             node = node.next
