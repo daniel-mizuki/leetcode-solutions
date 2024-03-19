@@ -18,3 +18,6 @@ class ListNode:
             node = node.next
             other = other.next
         return not (other or node)
+
+    def __repr__(self) -> str:
+        return f"{self.val} -> {self.next}"
