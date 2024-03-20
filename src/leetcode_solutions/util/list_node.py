@@ -10,6 +10,16 @@ class ListNode:
         self.val = val
         self.next = next_node
 
+    @classmethod
+    def from_list(cls, lst):
+        if not lst:
+            return None
+        head = curr = cls(lst[0])
+        for val in lst[1:]:
+            curr.next = cls(val)
+            curr = curr.next
+        return head
+
     def __eq__(self, other) -> bool:
         node = self
         while node and other:
