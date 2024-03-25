@@ -21,7 +21,7 @@ class TreeNode:
             tree_node = cls(val) if val is not None else None
             tree_node_list.append(tree_node)
 
-            if i == 0:
+            if i == 0 or tree_node is None:
                 continue
 
             parent = tree_node_list[(i - 1) // 2]
