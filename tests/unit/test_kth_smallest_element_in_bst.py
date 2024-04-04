@@ -17,7 +17,7 @@ from leetcode_solutions.kth_smallest_element_in_bst import Solution, TreeNode
         ([1, 2, 3], 5, None),
         ([1, 2, 3], 0, None),
         ([1, 2, 3], -1, None),
-        ([1, None, 2, None, None, None, 3], 3, 3),
+        ([1, None, 2, None, 3], 3, 3),
         ([7, 3, 8, 1, 5, None, None, None, 2, 4, 6], 4, 4),
     ],
 )

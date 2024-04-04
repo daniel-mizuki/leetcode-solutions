@@ -15,24 +15,46 @@ class TreeNode:
 
     @classmethod
     def from_list(cls, lst):
-        tree_node_list = []
+        # tree_node_list = []
+
+        # for i, val in enumerate(lst):
+        #     tree_node = cls(val) if val is not None else None
+        #     tree_node_list.append(tree_node)
+
+        #     if i == 0 or tree_node is None:
+        #         continue
+
+        #     parent = tree_node_list[(i - 1) // 2]
+        #     if parent is None:
+        #         raise ValueError("Invalid tree")
+        #     if i % 2 == 0:
+        #         parent.right = tree_node
+        #     else:
+        #         parent.left = tree_node
+
+        # return tree_node_list[0] if tree_node_list else None
+
+        root = None
+        node_queue = []
 
         for i, val in enumerate(lst):
-            tree_node = cls(val) if val is not None else None
-            tree_node_list.append(tree_node)
+            node = cls(val) if val is not None else None
 
-            if i == 0 or tree_node is None:
+            if node is not None:
+                node_queue.append(node)
+
+            if i == 0:
+                root = node
                 continue
 
-            parent = tree_node_list[(i - 1) // 2]
-            if parent is None:
-                raise ValueError("Invalid tree")
-            if i % 2 == 0:
-                parent.right = tree_node
+            parent = node_queue[0]
+            if i % 2 == 1:
+                parent.left = node
             else:
-                parent.left = tree_node
+                parent.right = node
+                node_queue.pop(0)
 
-        return tree_node_list[0] if tree_node_list else None
+        return root
 
     def to_list(self):
         lst = list(traverse_level_order_with_none(self))
